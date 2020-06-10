@@ -24,6 +24,7 @@ int main() {
 
 int b= dron.rysuj(api);
 dno.rysuj(api);
+cout<<"Id drona "<<b<<endl;
 
 char input='0';
 while(input!='q')

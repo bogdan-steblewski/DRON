@@ -6,8 +6,11 @@ __start__: main.out
 main.out: Dr3D_gnuplot_api.o main.o
 	g++ -o main.out main.o Dr3D_gnuplot_api.o -lpthread
 
-main.o: src/main.cpp inc/Dr3D_gnuplot_api.hh
-	g++ ${CPPFLAGS} -o main.o src/main.cpp
+main.o: src/main.cpp inc/Dr3D_gnuplot_api.hh KsztaltyRzeczywiste.o
+	g++ ${CPPFLAGS} -o main.o src/main.cpp KsztaltyRzeczywiste.o
+
+KsztaltyRzeczywiste.o: src/KsztaltyRzeczywiste.cpp inc/KsztaltyRzeczywiste.hh
+	g++ ${CPPFLAGS} src/KsztaltyRzeczywiste.cpp inc/KsztaltyRzeczywiste.hh inc/KsztaltyMatematyczne.hh
 
 Dr3D_gnuplot_api.o: src/Dr3D_gnuplot_api.cpp inc/Dr3D_gnuplot_api.hh
 	g++ ${CPPFLAGS} -o Dr3D_gnuplot_api.o src/Dr3D_gnuplot_api.cpp

@@ -1,4 +1,4 @@
-#include "KsztaltyRzeczywiste.hh"
+#include "../inc/KsztaltyRzeczywiste.hh"
 #include <iostream>
 #include <cmath>
 
@@ -7,10 +7,8 @@ using std::vector;
 using drawNS::Point3D;
 using drawNS::APIGnuPlot3D;
 
-class Dno:public Plaszczyzna
-{
-public:
-void rysuj(drawNS::Draw3DAPI* api)
+
+void Dno::rysuj(drawNS::Draw3DAPI* api)
 {
 api->draw_surface(vector<vector<Point3D> > {{
 	drawNS::Point3D(-15,-15,-15), drawNS::Point3D(-15,-8,-15), drawNS::Point3D(-15,0,-15), drawNS::Point3D(-15,8,-15), drawNS::Point3D(-15,15,-15)
@@ -26,13 +24,3 @@ api->draw_surface(vector<vector<Point3D> > {{
   cout << "pojawiła się szara powierzchnia" << endl;
 
 }
-};
-class Tafla:public Plaszczyzna
-{};
-class Przeszkoda //3d prostopadloscian, graniastoslup, dron
-{
-};
-class PrzeszkodaProsta
-{};
-class Sruba
-{};

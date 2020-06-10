@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <cmath>
-#include "KszaltyMatematyczne.hh"
+#include "KsztaltyMatematyczne.hh"
 
 class Przeszkoda //3d prostopadloscian, graniastoslup, dron
 {
