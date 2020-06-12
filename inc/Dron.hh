@@ -20,7 +20,8 @@ public:
         int odleg = odl;
         for (int i; i < odleg; i++)
         {
-            //TERAZ mnozenie przez wektor
+            //TERAZ mnozenie przez wektor, 
+            //uwzgledniajacy obrot wzgledem plaszczyzny XY
 
             //trzeba zmienic sposob odswiezania
             //tu bedzie animacja i ogolnie ruch
@@ -32,6 +33,8 @@ public:
         for (int i; i < angle; i++)
         {
             //TERAZ mnozenie przez macierz
+
+
             //trzeba zmienic sposob odswiezania
             //tu tez bedzie animacja i ruch
         }

@@ -5,13 +5,13 @@
 class macierz
 {
 private:
-    //bede za kazdym razem tworzyl nowy obiekt
+    //za kazdym razem nowy obiekt?
     double MacierzObX[3][3];
     double MacierzObY[3][3];
     double MacierzObZ[3][3];
 
-    //przepisane z Wikipedii
-public:
+    
+public: //macierze przepisane z Wikipedii
     macierz(double a=0, double b=0, double c=0)
 {
         MacierzObX[0][0] = 1;
@@ -46,7 +46,19 @@ public:
     MacierzObZ[2][1] = 0;
     MacierzObZ[2][2] = 1;
     //return MacierzObZ[][];
+ 
 };
 //operator *
+/*   Wektor Macierz::operator*(Wektor Skl)
+{
+    Wektor wynik;
+    for (int i = 0; i < ROZMIAR; i++)
+        wynik[i] = 0;
+    for (int i = 0; i < ROZMIAR; i++)
+        for (int j = 0; j < ROZMIAR; j++)
+            wynik[i] = wynik[i] + Tablica[j][i] * Skl[j];
+
+    return wynik;
+}*/
 }
 ;

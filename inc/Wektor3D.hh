@@ -11,4 +11,7 @@ public:
     wektor(double a){
         //tu mam zamiar rozkladac odleglosc na skladowe, ale czy jes
     };
+    wektor operator *(double skl2)
+    {
+    };
 }; 
