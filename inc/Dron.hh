@@ -9,7 +9,7 @@
 using std::shared_ptr;
 using namespace drawNS;
 
-class Dron : public Prostopadloscian
+class Dron : public Prostopadloscian, public Przeszkoda
 {
     int index;
 

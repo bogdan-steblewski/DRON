@@ -8,21 +8,21 @@
 class Przeszkoda //3d prostopadloscian, graniastoslup, dron
 {
 };
-class PrzeszkodaProstopadloscian
+class PrzeszkodaProstopadloscian : public Przeszkoda, public Prostopadloscian
 {
 };
-class Sruba
+class Sruba : public Graniastoslup6
 {
 };
 
-class Tafla : public Plaszczyzna
+class Tafla : public Plaszczyzna, public Przeszkoda
 {
 public:
     Tafla(drawNS::Draw3DAPI *api);
     void rysuj(drawNS::Draw3DAPI *api);
 };
 
-class Dno : public Plaszczyzna
+class Dno : public Plaszczyzna, public Przeszkoda
 {
 public:
     Dno(drawNS::Draw3DAPI *api);

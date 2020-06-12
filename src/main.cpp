@@ -15,10 +15,11 @@ void menu();
 int main()
 {
 
-  drawNS::Draw3DAPI *api = new APIGnuPlot3D(-15, 15, -15, 15, -15, 15, 10); //włacza gnuplota, pojawia się scena [-5,5] x [-5,5] x [-5,5] odświeżana co 10 ms
+  drawNS::Draw3DAPI *api = new APIGnuPlot3D(-15, 15, -15, 15, -15, 15, 10); //włacza gnuplota, pojawia się scena, odświeżana co 10 ms
   Dno dno(api);
   Dron dron(api);
   Tafla tafla(api);
+
 
   menu();
 char input;
