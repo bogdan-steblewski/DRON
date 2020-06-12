@@ -1,15 +1,16 @@
 #include "Dr3D_gnuplot_api.hh"
+#include "MathWzorce.hh"
 
-class Tafla
+class Tafla:public Plaszczyzna
 {
 public:
-    Tafla(drawNS::Draw3DAPI *api);
-    void rysuj(drawNS::Draw3DAPI *api);
+    Tafla(std::shared_ptr<drawNS::Draw3DAPI> api);
+    void rysuj(std::shared_ptr<drawNS::Draw3DAPI> api);
 };
 
-class Dno 
+class Dno:public Plaszczyzna
 {
 public:
-    Dno(drawNS::Draw3DAPI *api);
-    void rysuj(drawNS::Draw3DAPI *api);
+    Dno(std::shared_ptr<drawNS::Draw3DAPI> api);
+    void rysuj(std::shared_ptr<drawNS::Draw3DAPI> api);
 };
