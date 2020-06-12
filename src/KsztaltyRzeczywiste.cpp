@@ -3,24 +3,41 @@
 #include <cmath>
 
 using namespace std;
-using std::vector;
-using drawNS::Point3D;
 using drawNS::APIGnuPlot3D;
+using drawNS::Point3D;
+using std::vector;
 
 
-void Dno::rysuj(drawNS::Draw3DAPI* api)
+Dno::Dno(drawNS::Draw3DAPI *api)
 {
-api->draw_surface(vector<vector<Point3D> > {{
-	drawNS::Point3D(-15,-15,-15), drawNS::Point3D(-15,-8,-15), drawNS::Point3D(-15,0,-15), drawNS::Point3D(-15,8,-15), drawNS::Point3D(-15,15,-15)
-	  },{
-	drawNS::Point3D(-8,-15,-15), drawNS::Point3D(-2,0,-15), drawNS::Point3D(-2,2,-15), drawNS::Point3D(-4,2,-15), drawNS::Point3D(-15,-15,-15)       
-	  },{
-	drawNS::Point3D(0,-15,-15), drawNS::Point3D(-0,0,-15), drawNS::Point3D(-0,2,-15), drawNS::Point3D(-4,2,-15), drawNS::Point3D(-15,-15,-15)       
-	  },{
-	drawNS::Point3D(8,-15,-15), drawNS::Point3D(2,0,-15), drawNS::Point3D(2,2,-15), drawNS::Point3D(-4,2,-15), drawNS::Point3D(-15,-15,-15)       
-	  },{
-	drawNS::Point3D(15,-15,-15), drawNS::Point3D(4,0,-15), drawNS::Point3D(4,2,-15), drawNS::Point3D(-4,2,-15), drawNS::Point3D(-15,-15,-15)       
-	  }},"grey");//rysuje szarą powierzchnie
-  cout << "pojawiła się szara powierzchnia" << endl;
+	rysuj(api);
+}
 
+void Dno::rysuj(drawNS::Draw3DAPI *api)
+{
+	api->draw_surface(vector<vector<Point3D>>{{drawNS::Point3D(-15, -15, -15), drawNS::Point3D(-15, -8, -15), drawNS::Point3D(-15, 0, -15), drawNS::Point3D(-15, 8, -15),
+	 drawNS::Point3D(-15, 15, -15)}, {drawNS::Point3D(-8, -15, -15), drawNS::Point3D(-8, -8, -15), drawNS::Point3D(-8, 0, -15),
+	  drawNS::Point3D(-8, 8, -15), drawNS::Point3D(-8, 15, -15)}, {drawNS::Point3D(0, -15, -15), drawNS::Point3D(0, -8, -15), 
+	  drawNS::Point3D(0, 0, -15), drawNS::Point3D(0, 8, -15), drawNS::Point3D(0, 15, -15)}, {drawNS::Point3D(8, -15, -15), drawNS::Point3D(8, -8, -15),
+	   drawNS::Point3D(8, 0, -15), drawNS::Point3D(8, 8, -15), drawNS::Point3D(8, 15, -15)}, {drawNS::Point3D(15, -15, -15),
+	   drawNS::Point3D(15, -8, -15), drawNS::Point3D(15, 0, -15), drawNS::Point3D(15, 8, -15), drawNS::Point3D(15, 15, -15)}}, "grey"); //rysuje szarą powierzchnie
+
+}
+
+
+Tafla::Tafla(drawNS::Draw3DAPI *api)
+{
+	rysuj(api);
+}
+
+void Tafla::rysuj(drawNS::Draw3DAPI *api)
+{
+	api->draw_surface(vector<vector<Point3D>>{{drawNS::Point3D(-15, -15, 15), drawNS::Point3D(-15, -8, 15), drawNS::Point3D(-15, 0, 15), drawNS::Point3D(-15, 8, 15),
+	 drawNS::Point3D(-15, 15, 15)}, {drawNS::Point3D(-8, -15, 15), drawNS::Point3D(-8, -8, 15), drawNS::Point3D(-8, 0,15), 
+	 drawNS::Point3D(-8, 8, 15), drawNS::Point3D(-8, 15, 15)}, {drawNS::Point3D(0, -15, 15), drawNS::Point3D(0, -8,15), 
+	 drawNS::Point3D(0, 0, 15), drawNS::Point3D(0, 8, 15), drawNS::Point3D(0, 15, 15)}, {drawNS::Point3D(8, -15, 15), 
+	 drawNS::Point3D(8, -8, 15), drawNS::Point3D(8, 0, 15), drawNS::Point3D(8, 8, 15), drawNS::Point3D(8, 15, 15)},
+	  {drawNS::Point3D(15, -15, 15), drawNS::Point3D(15, -8, 15), drawNS::Point3D(15, 0, 15), drawNS::Point3D(15, 8, 15),
+	   drawNS::Point3D(15, 15, 15)}}, "blue"); //rysuje szarą powierzchnie
+																																																																																																																																																																																											  //takie samo jak w dno
 }

@@ -9,9 +9,12 @@
 using std::shared_ptr;
 using namespace drawNS;
 
-class Dron:public Prostopadloscian
+class Dron : public Prostopadloscian
 {
+    int index;
+
 public:
-int rysuj (drawNS::Draw3DAPI* api);
+    Dron(drawNS::Draw3DAPI *api);
+    int rysuj(drawNS::Draw3DAPI *api);
 };
 #endif

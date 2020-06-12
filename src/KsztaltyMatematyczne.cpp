@@ -1,20 +1,19 @@
-#include "KszaltyMatematyczne.hh"
+#include "../inc/KsztaltyMatematyczne.hh"
 #include <iostream>
 #include <cmath>
 
-class Macierz
-{};
-class MacierzOb:public Macierz
-{};
-class Macierz3x3:public Macierz
-{};
-class Wektor3d
-{};
-class Bryla
-{};
-class Prostopadloscian:public Bryla
-{};
-class Graniastoslup6:public Bryla
-{};
-class Plaszczyzna
-{};
+//Macierz::
+
+//MacierzOb:public Macierz
+
+//Macierz3x3:public Macierz
+
+//Wektor3d
+
+//Bryla
+
+//Prostopadloscian:public Bryla
+
+//Graniastoslup6:public Bryla
+
+//Plaszczyzna
