@@ -1,6 +1,7 @@
-#include "../inc/KsztaltyRzeczywiste.hh"
+#include "../inc/Tafla_Dno.hh"
 #include <iostream>
 #include <cmath>
+
 
 using namespace std;
 using drawNS::APIGnuPlot3D;
@@ -8,12 +9,12 @@ using drawNS::Point3D;
 using std::vector;
 
 
-Dno::Dno(drawNS::Draw3DAPI *api)
+Dno::Dno(std::shared_ptr<drawNS::Draw3DAPI> api)
 {
 	rysuj(api);
 }
 
-void Dno::rysuj(drawNS::Draw3DAPI *api)
+void Dno::rysuj(std::shared_ptr<drawNS::Draw3DAPI> api)
 {
 	api->draw_surface(vector<vector<Point3D>>{{drawNS::Point3D(-15, -15, -15), drawNS::Point3D(-15, -8, -15), drawNS::Point3D(-15, 0, -15), drawNS::Point3D(-15, 8, -15),
 	 drawNS::Point3D(-15, 15, -15)}, {drawNS::Point3D(-8, -15, -15), drawNS::Point3D(-8, -8, -15), drawNS::Point3D(-8, 0, -15),
@@ -25,12 +26,12 @@ void Dno::rysuj(drawNS::Draw3DAPI *api)
 }
 
 
-Tafla::Tafla(drawNS::Draw3DAPI *api)
+Tafla::Tafla(std::shared_ptr<drawNS::Draw3DAPI> api)
 {
 	rysuj(api);
 }
 
-void Tafla::rysuj(drawNS::Draw3DAPI *api)
+void Tafla::rysuj(std::shared_ptr<drawNS::Draw3DAPI> api)
 {
 	api->draw_surface(vector<vector<Point3D>>{{drawNS::Point3D(-15, -15, 15), drawNS::Point3D(-15, -8, 15), drawNS::Point3D(-15, 0, 15), drawNS::Point3D(-15, 8, 15),
 	 drawNS::Point3D(-15, 15, 15)}, {drawNS::Point3D(-8, -15, 15), drawNS::Point3D(-8, -8, 15), drawNS::Point3D(-8, 0,15), 

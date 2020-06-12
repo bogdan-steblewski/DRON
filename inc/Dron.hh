@@ -1,20 +1,13 @@
-#ifndef DRON
-#define DRON
-
-#include <iostream>
-#include <cmath>
-#include "KsztaltyMatematyczne.hh"
-#include "KsztaltyRzeczywiste.hh"
-
-using std::shared_ptr;
-using namespace drawNS;
-
-class Dron : public Prostopadloscian, public Przeszkoda
+#pragma once
+#include "Dr3D_gnuplot_api.hh"
+#include <vector>
+class Dron
 {
-    int index;
-
+    static int ilosc_obiektow;
+    
 public:
-    Dron(drawNS::Draw3DAPI *api);
-    int rysuj(drawNS::Draw3DAPI *api);
+void ruch(vector<double, 3>, DrawNS::Draw3DAPI *api);
+void rysuj(DrawNS::Draw3DAPI *api);
+Dron (DrawNS::Draw3DAPI *api)
+{}
 };
-#endif
