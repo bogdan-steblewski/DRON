@@ -29,7 +29,8 @@ int main()
   start[0] = -5;
   start[1] = -5;
   start[2] = -5;
-  std::shared_ptr<drawNS::Draw3DAPI> api(new APIGnuPlot3D(-100, 100, -100, 100, -100, 100, 1000)); //włacza gnuplota, pojawia się scena [-5,5] x [-5,5] x [-5,5] odświeżana co 1000 ms
+  std::shared_ptr<drawNS::Draw3DAPI> api(new APIGnuPlot3D(-100, 100, -100, 100, -100, 100, 1000));//mam watpliowosci czy to nie jest w mikrosekundach
+   //włacza gnuplota, pojawia się scena [-5,5] x [-5,5] x [-5,5] odświeżana co 1000 ms
   //drawNS::Draw3DAPI * api = new APIGnuPlot3D(-5,5,-5,5,-5,5,1000); //alternatywnie zwykły wskaźnik
   api->change_ref_time_ms(0); //odświeżanie sceny zmienione na opcję "z każdym pojawieniem się lub zniknięciem kształtu"
   Dno dno(api);
@@ -52,10 +53,14 @@ for(int i=0; i<tab.size(); i++)
   double kat, droga;
   while (1)
   {
+  
     cout<<" r ruch, o obrot , k koniec "<<endl;
     std::cin >> znak;
     switch (znak)
     {
+    case 'k':
+    return 0;
+    break;
     case 'r':
       std::cout << "kat wznoszenia" << std::endl;
       std::cin >> kat;
@@ -71,6 +76,8 @@ for(int i=0; i<tab.size(); i++)
         pr.ruch(1, 0, kat);
         pr.rysuj();
       }
+          pr.ruch(1, 0, 0);
+        pr.rysuj();
       break;
     case 'o':
       std::cout << "kat obrotu" << std::endl;
