@@ -1,2 +1,0 @@
-# DRON
-Zadanie z PO
