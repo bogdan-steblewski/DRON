@@ -14,6 +14,9 @@ Dr3D_gnuplot_api.o: Dr3D_gnuplot_api.cpp Dr3D_gnuplot_api.hh
 
 Dr3D_gnuplot_api.hh: Draw3D_api_interface.hh
 	touch Dr3D_gnuplot_api.hh
+__start_doxy__:
+	doxygen Doxyfile 2> doxy.log
+	less doxy.log
 
 clear:
 	rm example.out example.o Dr3D_gnuplot_api.o
