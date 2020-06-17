@@ -6,17 +6,14 @@ __start__: example.out
 example.out: Dr3D_gnuplot_api.o example.o
 	g++ -o example.out example.o Dr3D_gnuplot_api.o -lpthread
 
-example.o: example.cpp Dr3D_gnuplot_api.hh
-	g++ ${CPPFLAGS} -o example.o example.cpp
+example.o: src/example.cpp inc/API/Dr3D_gnuplot_api.hh
+	g++ ${CPPFLAGS} -o example.o src/example.cpp
 
-Dr3D_gnuplot_api.o: Dr3D_gnuplot_api.cpp Dr3D_gnuplot_api.hh
-	g++ ${CPPFLAGS} -o Dr3D_gnuplot_api.o Dr3D_gnuplot_api.cpp
+Dr3D_gnuplot_api.o: src/Dr3D_gnuplot_api.cpp inc/API/Dr3D_gnuplot_api.hh
+	g++ ${CPPFLAGS} -o Dr3D_gnuplot_api.o src/Dr3D_gnuplot_api.cpp
 
-Dr3D_gnuplot_api.hh: Draw3D_api_interface.hh
-	touch Dr3D_gnuplot_api.hh
-__start_doxy__:
-	doxygen Doxyfile 2> doxy.log
-	less doxy.log
+Dr3D_gnuplot_api.hh: inc/API/Draw3D_api_interface.hh
+	touch inc/API/Dr3D_gnuplot_api.hh
 
 clear:
 	rm example.out example.o Dr3D_gnuplot_api.o
